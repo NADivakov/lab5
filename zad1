@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+int main () {
+   	int i,j,k,l,m,d,n,o,sum=0,max,min;
+   	   	float array[20][20];
+   	   	
+   	   	
+   time_t t;
+printf("Vvedite lok-vo strok:(<10) \n");
+	scanf("%d",&k);
+    printf("Vvedite kol-vo stolbcov:(<10)\n");
+	scanf("%d",&l);
+
+	for(i=0; i<k; i++)
+    {	
+	for (j=0; j<l; j++)
+	
+	
+	 array[i][j]=rand() % 15;
+   
+	} 
+	for(i=0; i<k; i++)
+	sum+=array[i][i];
+	printf("summa el-ov=%d \n", sum);
+	 	printf("array:\n ");
+	  	for(i=0; i<k; i++) 
+    {	printf("\n ");
+	for (j=0; j<l; j++)
+	 printf("%0.f ", array[i][j]);
+	 	printf("\n ");
+}
+	
+
+for(i=0;  i<k; i++)
+{min=16; max=0;
+		for(j=0; j<l; j++)
+			{
+				if (array[i][j]>max)
+ 
+ max=array[i][j]; 
+ m=i;
+ d=j;
+ if (array[i][j]<min)
+ 
+ {
+ min=array[i][j];
+ o=i;
+ n=j;}
+array[o][n]=max;
+array[m][d]=min;	}
+}
+printf(" matricza: \n");
+for(i=0; i<k; i++) 
+    {	printf("\n ");
+	for (j=0; j<l; j++)
+	 printf("%0.f ", array[i][j]);
+	 
+	 
+}
+}
